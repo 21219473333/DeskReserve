@@ -340,13 +340,13 @@ select:focus{border-color:var(--t);}
 'use strict';
 
 var ZONES={1:'North Area',2:'North Area',3:'North Area',4:'West Area',5:'West Area',6:'West Area',7:'West Area',8:'West Area',9:'West Area',10:'West Area',11:'West Area',12:'West Area',13:'Center',14:'Center',15:'Center',16:'Center',17:'Center',18:'Center',19:'Center',20:'Center',21:'Center',22:'Center',23:'Center',24:'Center',25:'Center',26:'Center',27:'Center',28:'Open Space',29:'Right Cluster',30:'Right Cluster'};
-var SK='funaro_desk_v9';
+var SK='funaro_desk_v10';
 
 var DEFAULT_POS={1:{x:225,y:28},2:{x:298,y:28},3:{x:261,y:100},4:{x:18,y:28},5:{x:18,y:110},6:{x:88,y:110},7:{x:18,y:180},8:{x:88,y:180},9:{x:18,y:278},10:{x:88,y:278},11:{x:18,y:350},12:{x:88,y:350},13:{x:175,y:170},14:{x:175,y:242},15:{x:268,y:170},16:{x:338,y:170},17:{x:408,y:170},18:{x:478,y:170},19:{x:548,y:170},20:{x:268,y:242},21:{x:338,y:242},22:{x:408,y:242},23:{x:478,y:242},24:{x:268,y:314},25:{x:338,y:314},26:{x:408,y:314},27:{x:175,y:380},28:{x:185,y:438},29:{x:670,y:172},30:{x:745,y:172}};
 
 function mkDefault(){
   var users=[{id:'admin',username:'admin',password:'Admin@2024!',fullName:'System Administrator',role:'admin'}];
-  for(var i=1;i<=40;i++) users.push({id:'u'+i,username:'user'+(i<10?'0':'')+i,password:'Pass'+i+'@Funaro',fullName:'Team Member '+i,role:'user'});
+  for(var i=1;i<=50;i++) users.push({id:'u'+i,username:'user'+(i<10?'0':'')+i,password:'Pass'+i+'@Funaro',fullName:'Team Member '+i,role:'user'});
   return{users:users,bookings:[],settings:{maxDays:30,maxBookingsPerUser:3},nid:1,deskPos:JSON.parse(JSON.stringify(DEFAULT_POS)),blocked:[]};
 }
 
